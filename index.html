@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Interactive card details form</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="card-container">
+      <div class="card card-back">
+        <span class="card-cvv">000</span>
+      </div>
+      <div class="card card-front">
+        <img src="./images/card-logo.svg" alt="" class="card-logo" />
+        <p class="card-number">0000 0000 0000 0000</p>
+        <div class="card-name-expiryDate">
+          <span class="card-name">JANAE APPLESEED</span>
+          <span class="card-date">00/00</span>
+        </div>
+      </div>
+    </div>
+    <form action="">
+      <div id="card-form">
+        <label for="name">CARDHOLDER NAME</label>
+        <input
+          type="text"
+          name="name"
+          id="name"
+          placeholder="e.g. Jane Appleseed"
+        />
+        <label for="number">CARD NUMBER</label>
+        <input
+          type="text"
+          name="number"
+          id="number"
+          placeholder="e.g. 1234 5678 9123 0000"
+        />
+        <div id="expiry-form">
+          <div id="expiry-box">
+            <label for="expiryDate">EXP. DATE (MM/YY)</label>
+            <div id="input-month-year">
+              <input
+                type="text"
+                name="expiryDate"
+                id="expiry-date"
+                placeholder="MM"
+              />
+              <input
+                type="text"
+                name="expiryDate"
+                id="expiry-date"
+                placeholder="YY"
+              />
+            </div>
+          </div>
+          <div id="cvc-box">
+            <label for="cvc">CVC</label>
+            <input type="text" name="cvc" id="cvc" placeholder="e.g. 123" />
+          </div>
+        </div>
+        <button class="btn">Confirm</button>
+      </div>
+    </form>
+  </body>
+</html>

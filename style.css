@@ -1,0 +1,215 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap");
+
+* {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+  font-family: "Space Grotesk";
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card-container {
+  width: 100%;
+  position: relative;
+  height: 190px;
+  background: url("./images/bg-main-mobile.png");
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card {
+  position: relative;
+}
+
+.card-back::before {
+  content: "";
+  position: absolute;
+  display: block;
+  background: url(./images/bg-card-back.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 710%;
+  height: 124px;
+  left: 1rem;
+  bottom: -3rem;
+}
+
+.card-front::before {
+  content: "";
+  position: absolute;
+  display: block;
+  background: url(./images/bg-card-front.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 120%;
+  height: 119px;
+  left: -3rem;
+  top: 2.4rem;
+}
+
+.card-cvv {
+  color: white;
+  position: relative;
+  top: -0.3rem;
+  left: 11rem;
+}
+
+.card-logo {
+  position: relative;
+  top: 3rem;
+  left: -2rem;
+  width: 50px;
+}
+
+.card-number {
+  position: relative;
+  color: white;
+  top: 4.4rem;
+  left: -1.9rem;
+}
+
+.card-name-expiryDate {
+  color: white;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.7rem;
+  top: 5rem;
+  left: -2rem;
+}
+
+form {
+  width: 80%;
+  height: 450px;
+  display: flex;
+  align-items: flex-end;
+}
+
+#card-form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+#card-form label {
+  margin-top: 4px;
+  margin-bottom: 4px;
+  color: hsl(278, 68%, 11%);
+}
+
+#card-form input {
+  padding: 10px;
+  height: 50px;
+  margin-top: 4px;
+  margin-bottom: 14px;
+  border-radius: 11px;
+  box-sizing: border-box;
+  font-size: 1.3rem;
+  color: hsl(278, 68%, 11%);
+  border: 2px solid hsl(279, 6%, 55%);
+}
+
+#card-form input:focus {
+  outline: none;
+  border: 2px solid hsl(278, 68%, 11%);
+}
+
+::placeholder {
+  color: hsl(279, 6%, 55%);
+}
+
+#expiry-form {
+  display: flex;
+  margin-top: 6px;
+}
+
+#input-month-year {
+  display: flex;
+}
+
+#input-month-year input {
+  width: 40%;
+  margin-right: 10px;
+}
+
+#cvc-box {
+  width: 80%;
+}
+#cvc-box input {
+  width: 100%;
+}
+
+.btn {
+  margin-top: 24px;
+  height: 50px;
+  margin-top: 24px;
+  height: 50px;
+  border-radius: 11px;
+  font-size: 1.5rem;
+  color: hsl(0, 0%, 100%);
+  background-color: hsl(278, 68%, 11%);
+}
+
+@media only screen and (min-width: 768px) {
+  body {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .card-container {
+    position: relative;
+    width: 300px;
+    height: 100vh;
+    background: url("./images/bg-main-desktop.png");
+  }
+
+  .card-back::before {
+    left: 8rem;
+    bottom: 2rem;
+  }
+
+  .card-cvv {
+    left: 18rem;
+    top: -5.5rem;
+  }
+
+  .card-front::before {
+    left: 4rem;
+    top: 1.4rem;
+  }
+
+  .card-logo {
+    top: 2rem;
+    left: 5rem;
+  }
+
+  .card-number {
+    top: 3.7rem;
+    left: 5.1rem;
+  }
+
+  .card-name-expiryDate {
+    top: 4.2rem;
+    left: 5rem;
+  }
+
+  form {
+    width: 60%;
+    height: 450px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+
+  #card-form {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+  }
+}
