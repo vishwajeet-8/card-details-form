@@ -30,11 +30,11 @@ body {
 .card-back::before {
   content: "";
   position: absolute;
-  display: block;
+  display: inline-block;
   background: url(./images/bg-card-back.png);
   background-size: contain;
   background-repeat: no-repeat;
-  width: 710%;
+  width: 224px;
   height: 124px;
   left: 1rem;
   bottom: -3rem;
@@ -47,13 +47,20 @@ body {
   background: url(./images/bg-card-front.png);
   background-size: contain;
   background-repeat: no-repeat;
-  width: 120%;
+  width: 217px;
   height: 119px;
   left: -3rem;
   top: 2.4rem;
 }
 
+.card-front {
+  display: flex;
+  flex-direction: column;
+}
+
 .card-cvv {
+  display: inline-block;
+  width: 37px;
   color: white;
   position: relative;
   top: -0.3rem;
@@ -68,25 +75,38 @@ body {
 }
 
 .card-number {
+  display: inline-block;
+  width: 186px;
   position: relative;
   color: white;
-  top: 4.4rem;
-  left: -1.9rem;
+  top: 5rem;
+  left: -2rem;
 }
 
 .card-name-expiryDate {
   color: white;
   position: relative;
-  display: flex;
-  justify-content: space-between;
   font-size: 0.7rem;
-  top: 5rem;
-  left: -2rem;
+  top: 5.4rem;
+  display: inline-block;
+  left: -2.6rem;
+}
+
+.card-name {
+  display: inline-block;
+  width: 120px;
+}
+
+.card-date {
+  margin-left: 50px;
+  margin-left: 50px;
+  display: inline-block;
+  width: 33px;
 }
 
 form {
   width: 80%;
-  height: 450px;
+  height: 500px;
   display: flex;
   align-items: flex-end;
 }
@@ -107,7 +127,6 @@ form {
   padding: 10px;
   height: 50px;
   margin-top: 4px;
-  margin-bottom: 14px;
   border-radius: 11px;
   box-sizing: border-box;
   font-size: 1.3rem;
@@ -148,12 +167,19 @@ form {
 .btn {
   margin-top: 24px;
   height: 50px;
-  margin-top: 24px;
+  margin-top: 10px;
   height: 50px;
   border-radius: 11px;
   font-size: 1.5rem;
   color: hsl(0, 0%, 100%);
   background-color: hsl(278, 68%, 11%);
+}
+
+.card-para {
+  height: 20px;
+  margin: 10px 0px;
+  font-size: 0.9rem;
+  color: hsl(0, 100%, 66%);
 }
 
 @media only screen and (min-width: 768px) {
@@ -196,7 +222,7 @@ form {
 
   .card-name-expiryDate {
     top: 4.2rem;
-    left: 5rem;
+    left: 4.2rem;
   }
 
   form {
