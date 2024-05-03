@@ -43,15 +43,17 @@
           id="name"
           placeholder="e.g. Jane Appleseed"
           oninput="inputHandle(event)"
+          value=""
         />
         <p class="card-para card-name-para"></p>
         <label for="number">CARD NUMBER</label>
         <input
-          type="pattern"
+          type="text"
           name="number"
           id="number"
           placeholder="e.g. 1234 5678 9123 0000"
           oninput="inputHandle(event)"
+          value=""
         />
         <p class="card-para card-number-para"></p>
         <div id="expiry-form">
@@ -87,9 +89,19 @@
             <p class="card-para card-cvv-para"></p>
           </div>
         </div>
+        <p class="card-para error"></p>
         <button class="btn">Confirm</button>
       </div>
     </form>
+
+    <div class="complete-card">
+      <img src="./images/icon-complete.svg" alt="" />
+      <div class="thanks">
+        <h1>Thank You!</h1>
+        <p>We've added your card details</p>
+      </div>
+      <button class="btn ctn-btn">continue</button>
+    </div>
 
     <script src="./script.js"></script>
   </body>
